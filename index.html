@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Boeing vs Airbus</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+		}
+		
+		.boeing-side {
+			width: 50%;
+			background-color: #007bff; /* blue */
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		
+		.airbus-side {
+			width: 50%;
+			background-color: #ff0000; /* red */
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		
+		.company-name {
+			font-size: 36px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		
+		.plane-list {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.plane-list li {
+			margin-bottom: 10px;
+		}
+		
+		.plane-info {
+			display: none;
+		}
+		
+		.back-button {
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="boeing-side">
+		<h1 class="company-name" id="boeing">Boeing</h1>
+		<ul class="plane-list" id="boeing-planes">
+			<li id="737">737</li>
+			<li id="747">747</li>
+			<li id="757">757</li>
+			<li id="767">767</li>
+			<li id="777">777</li>
+			<li id="787">787</li>
+		</ul>
+		<div class="plane-info" id="boeing-info">
+			<p id="boeing-description"></p>
+			<p id="boeing-specs"></p>
+			<button class="back-button" id="boeing-back">Back</button>
+		</div>
+	</div>
+	<div class="airbus-side">
+		<h1 class="company-name" id="airbus">Airbus</h1>
+		<ul class="plane-list" id="airbus-planes">
+			<li id="A320">A320</li>
+			<li id="A330">A330</li>
+			<li id="A340">A340</li>
+			<li id="A350">A350</li>
+			<li id="A380">A380</li>
+		</ul>
+		<div class="plane-info" id="airbus-info">
+			<p id="airbus-description"></p>
+			<p id="airbus-specs"></p>
+			<button class="back-button" id="airbus-back">Back</button>
+		</div>
+	</div>
+	
+	<script>
+		const boeingPlanes = {
+			"737": {
+				description: "The Boeing 737 is a narrow-body aircraft produced by Boeing.",
+				specs: "Range: 3,850 nmi, Passengers: 85-215"
+			},
+			"747": {
+				description: "The Boeing 747 is a wide-body commercial airliner and cargo aircraft.",
+				specs: "Range: 8,555 nmi, Passengers: 374-660"
+			},
+			"757": {
+				description: "The Boeing 757 is a narrow-body commercial airliner.",
+				specs: "Range: 3,950 nmi, Passengers: 200-280"
+			},
+			"767": {
+				description: "The Boeing 767 is a wide-body commercial airliner.",
+				specs: "Range: 6,310 nmi, Passengers: 181-375"
+			},
+			"777": {
+				description: "The Boeing 777 is a wide-body commercial airliner.",
+				specs: "Range: 8,555 nmi, Passengers: 317-440"
+			},
+			"787": {
+				description: "The Boeing 787 Dreamliner is a wide-body commercial airliner.",
+				specs: "Range: 8,555 nmi, Passengers: 210-330"
+			}
+		};
+		
+		const airbusPlanes = {
+			"A320": {
+				description: "The Airbus A320 is a narrow-body commercial airliner.",
+				specs: "Range: 3,300 nmi, Passengers: 150-240"
+			},
+			"A330": {
+				description: "The Airbus A330 is a wide-body commercial airliner.",
+				specs: "Range: 7,250 nmi, Passengers: 250-440"
+			
